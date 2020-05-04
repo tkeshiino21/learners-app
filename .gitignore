@@ -81,3 +81,5 @@ yarn-error.log*
 nodemon.json
 
 /build
+client/
+/client
