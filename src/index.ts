@@ -1,9 +1,9 @@
 import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
-import { ApolloServer } from "apollo-server-express";
 import resolvers from "./graphql/resolvers/index";
 import typeDefs from "./graphql/typeDefs/index";
+const { ApolloServer } = require("apollo-server-express");
 
 const { APP_PORT = 7000, NODE_ENV = "development" } = process.env;
 
@@ -23,7 +23,7 @@ const IN_PROD = NODE_ENV === "production";
 
 const server = new ApolloServer({ typeDefs, resolvers, playground: !IN_PROD });
 
-const app = express();
+const app: express.Express = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 

@@ -2,9 +2,14 @@ import Book from "../models/Book";
 
 const booksResolvers = {
   Query: {
-    books: async (obj, args, context, info) => {
+    books: async (obj: any, args: any, context: any, info: any) => {
       const books = await Book.find({ title: "heo" });
-      const transformBook = book => {
+      const transformBook: (
+        book: any
+      ) => {
+        title: string;
+        author: string;
+      } = (book: any) => {
         return {
           title: book.title,
           author: book.author
@@ -14,13 +19,13 @@ const booksResolvers = {
         return transformBook(book), console.log(transformBook(book));
       });
     },
-    book: async (obj, args, context, info) => {
+    book: async (obj: any, args: any, context: any, info: any) => {
       const book = await Book.find({}).exec();
       return book;
     }
   },
   Mutation: {
-    addBook: async (obj, args, context, info) => {
+    addBook: async (obj: any, args: any, context: any, info: any) => {
       const book = await new Book({
         title: args.book.title,
         author: args.book.author

@@ -1,9 +1,9 @@
 const likeResolvers = {
   Mutation: {
     createLike: async (
-      root,
-      { input: { userId, postId } },
-      { Like, Post, User }
+      root: any,
+      { input: { userId, postId } }: any,
+      { Like, Post, User }: any
     ) => {
       const like = await new Like({ user: userId, post: postId }).save();
       await Post.findOneAndUpdate(
@@ -16,7 +16,11 @@ const likeResolvers = {
       );
       return like;
     },
-    deleteLike: async (root, { input: { id } }, { Like, User, Post }) => {
+    deleteLike: async (
+      root: any,
+      { input: { id } }: any,
+      { Like, User, Post }: any
+    ) => {
       const like = await Like.findByIdAndRemove(id);
       await User.findOneAndUpdate(
         { _id: like.user },
