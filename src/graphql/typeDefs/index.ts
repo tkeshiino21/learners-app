@@ -1,8 +1,7 @@
 import root from "./root";
-import bookType from "./bookType";
-import userType from "./userType";
-import likeType from "./likeType";
+import book from "./book";
+import user from "./user";
 
-const typeDefs = [root, bookType, userType, likeType];
+const typeDefs = [root, book, user];
 
 export default typeDefs;

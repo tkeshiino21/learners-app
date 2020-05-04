@@ -1,7 +1,6 @@
 import authResolvers from "./authResolvers";
-import likeResolvers from "./likeResolvers";
 import booksResolvers from "./booksResolvers";
 
-const resolvers = [authResolvers, likeResolvers, booksResolvers];
+const resolvers = [authResolvers, booksResolvers];
 
 export default resolvers;
