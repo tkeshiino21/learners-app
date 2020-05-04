@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import resolvers from "./graphql/resolvers/index";
 import typeDefs from "./graphql/typeDefs/index";
-const { ApolloServer } = require("apollo-server-express");
+import { ApolloServer } from "apollo-server-express";
 
 const { APP_PORT = 7000, NODE_ENV = "development" } = process.env;
 
@@ -16,7 +16,7 @@ mongoose
     console.log("DB connected");
   })
   .catch(err => {
-    console.log(err);
+    console.log("err:", err);
   });
 
 const IN_PROD = NODE_ENV === "production";

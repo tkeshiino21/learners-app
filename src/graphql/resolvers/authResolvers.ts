@@ -4,16 +4,21 @@ import jwt from "jsonwebtoken";
 
 const authResolvers = {
   Query: {
-    users: (obj: any, args: any, context: any, info: any) => {
+    users: () => {
       User;
       return User.find();
     },
-    user: (obj: any, { id }: any, context: any, info: any) => {
+    user: () => {
       return User.find();
     }
   },
   Mutation: {
-    createUser: async (args: any) => {
+    createUser: async (args: {
+      userInput: {
+        email: string;
+        password: string;
+      };
+    }) => {
       try {
         const exsistingUser = await User.findOne({
           email: args.userInput.email
@@ -32,7 +37,7 @@ const authResolvers = {
         throw err;
       }
     },
-    login: async ({ email, password }: any) => {
+    login: async ({ email, password }: { email: string; password: string }) => {
       const user: any = await User.findOne({ email: email });
       if (!user) {
         throw new Error("user doesnot exsist!");
