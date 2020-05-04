@@ -4,7 +4,7 @@
 
 ## ディレクトリ構成
 
-graphql
+graphql  
 ├── models // Mongo.db 用の型定義,mogoose.save()など  
 ├── schemas // joi を用いたヴァリデーション  
 ├── resolvers // メインのロジック  
