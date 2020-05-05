@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
+    "rootDirs": ["src", "stories"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -15,5 +16,5 @@
     "noEmit": true,
     "jsx": "preserve"
   },
-  "include": ["src", "test.js", "BookList.tsx"]
+  "include": ["src", "test.js", ".storybook/webpack.config.js"]
 }
