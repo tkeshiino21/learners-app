@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const Backdrop = styled.div`
+export const Modal = styled.div`
   position: absolute;
   background-color: rgba(0, 0, 0, 0.1);
   top: 0;

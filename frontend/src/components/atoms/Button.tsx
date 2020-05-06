@@ -9,9 +9,17 @@ type Props = {
   mb?: string;
   mr?: string;
   ml?: string;
+
+  /**
+   * Simple click handler
+   */
   onClick?: () => void;
   value?: string;
 };
+
+/**
+ * Simple click handler
+ */
 export const Button = styled.button<Props>`
   box-sizing: border-box;
   padding: 6px 16px;
@@ -37,22 +45,17 @@ export const Button = styled.button<Props>`
     border: none;
     color: ${ds.color('light')};
   }
-  &.secondary {
+  &.outlined {
     padding: 5px 15px;
     background-color: inherit;
-    border: 1px solid #ccc;
-    color: #ccc;
+    border: 1px solid ${ds.brand('main')};
+    color: ${ds.brand('main')};
   }
-  &.outlined {
+  &.grey {
     padding: 5px 15px;
     background-color: inherit;
     border: 1px solid ${ds.color('dark')};
     color: ${ds.color('dark')};
-  }
-  &.grey {
-    background-color: #ccc;
-    border: none;
-    color: #ccc;
   }
   &.disabled {
     padding: 5px 15px;

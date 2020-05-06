@@ -9,3 +9,4 @@ export { Heading, Text } from './Typography';
 export { Paper } from './Paper';
 export { StyledLink, StyledNavLink } from './Link';
 export { Image } from './Image';
+export { Modal } from './Modal';
