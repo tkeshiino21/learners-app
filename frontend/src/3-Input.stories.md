@@ -1,6 +1,5 @@
 import React from 'react';
-import book1 from '../images/book1.jpeg';
-import { Input, Label } from '../components/atoms/Input';
+import { Input, Label } from '../components/atoms';
 
 export default {
   title: 'Atoms/Input',
@@ -10,6 +9,6 @@ export default {
 export const InputStories = () => (
   <>
     <Label>お名前</Label>
-    <Input className="outlined" src={book1} />
+    <Input className="outlined" />
   </>
 );

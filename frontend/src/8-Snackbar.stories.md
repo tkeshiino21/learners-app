@@ -2,8 +2,8 @@ import React from 'react';
 import { Snackbar } from '../components/atoms';
 
 export default {
-  title: 'Atoms/Paper',
+  title: 'Atoms/Snackbar',
   component: Snackbar,
 };
 
-export const PaperStories = () => <Snackbar>ログイン成功</Snackbar>;
+export const SnackbarStories = () => <Snackbar>ログイン成功</Snackbar>;

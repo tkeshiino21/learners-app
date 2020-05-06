@@ -1,25 +1,13 @@
 import styled from '@emotion/styled';
 import ds from '../../theme/theme';
+import { MarginProps } from './type.d';
 
-type Props = {
+type Props = MarginProps & {
   text?: string;
   bg?: string;
-  m?: string;
-  mt?: string;
-  mb?: string;
-  mr?: string;
-  ml?: string;
-
-  /**
-   * Simple click handler
-   */
   onClick?: () => void;
   value?: string;
 };
-
-/**
- * Simple click handler
- */
 export const Button = styled.button<Props>`
   box-sizing: border-box;
   padding: 6px 16px;
@@ -88,8 +76,4 @@ export const Button = styled.button<Props>`
   &.middle {
     width: 80%;
   }
-`;
-
-export const ButtonWrapper = styled.div`
-  text-align: center;
 `;
