@@ -111,6 +111,18 @@ module.exports = {
       },
     ],
     'import/prefer-default-export': 'off',
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: [
+          '.storybook/**',
+          'stories/**',
+          '**/*/*.story.*',
+          '**/*/*.stories.*',
+          '**/*/*.test.tsx*',
+        ],
+      },
+    ],
   },
   settings: {
     'import/parsers': {

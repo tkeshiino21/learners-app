@@ -15,5 +15,11 @@
     "noEmit": true,
     "jsx": "preserve"
   },
-  "include": ["src", "test.js", "BookList.tsx"]
+  "include": [
+    "src",
+    "test.js",
+    "BookList.tsx",
+    "test/setupEnzyme.ts",
+    "jest.config.js"
+  ]
 }
